@@ -1,0 +1,48 @@
+  body{
+    background-color: #f5cc2b;
+    color: #000 !important;
+  }
+  *{
+    color: #000 !important;
+  }
+  .team-ul{
+    list-style: initial;
+    margin: 0px;
+  }
+  .team-ul li{
+    list-style: initial;
+    font-size: 1.2rem;
+  }
+
+  .input-field{
+    transition: all 0.5s ease;
+  }
+  .double-wrap{
+    transition: all 0.5s ease;
+  }
+  .btn-submit{
+    background-color: #5a5a5a;
+    color: #fff !important;
+  }
+  .material-icons{
+    color: #fff !important;
+  }
+  .btn-submit:hover{
+    background-color: #4d4d4d;
+  }
+  [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+    border: 2px solid #535353;
+  }
+  [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+    background-color: #535353;
+    z-index: 0;
+  }
+  input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #535353;
+  }
+  input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}

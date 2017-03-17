@@ -1,0 +1,23 @@
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  height: 100%;/*
+  background-color: #b61924; red*/
+  background-color: #f5cc2b;
+ /* background-color: #ffc20d;*/
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  /*box-shadow: inset -1px 3px 16px 3px #4b978e;*/
+}

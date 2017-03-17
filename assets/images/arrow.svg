@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg width="74" height="74" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>Transparent Arrow</title>
+
+ <g>
+  <title>Layer 1</title>
+  <use height="74" id="use1503" width="74" x="10" xlink:href="#rect899" y="10"/>
+  <path d="m284.276184,140.845963l23.411316,118.560287l-240.34375,-25l0,157.9375l240.34375,-25l-23.411316,111.220947l234.661316,-165.189697l-234.661316,-172.529037z" id="rect899" stroke-miterlimit="4" stroke-linejoin="round" stroke-linecap="round" stroke-width="15" stroke="#000000" fill-rule="evenodd" fill="#ffff00"/>
+ </g>
+</svg>

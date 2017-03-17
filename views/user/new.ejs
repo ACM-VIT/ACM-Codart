@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+
+
+<!--[if lt IE 8]> <html class="no-js ie ie8 ie7"> <![endif]-->
+<!--[if lte IE 8]> <html class="no-js ie ie8"> <![endif]-->
+<!--[if lte IE 9]> <html class="no-js ie"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
+<!--<![endif]-->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Language" content="en" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Codart'17 | ACM VIT</title>
+    <meta name="description" content="Codart is a coding contest with a twist. First Round will be conducted online on hackerrank from 10-12th Feb. Second round will be conducted offline where participants need to throw darts in order to receive questions!" />
+    <meta name="keywords" content="Codart,event,acm,vit,harshit kedia">
+    <meta name="author" content="ACM VIT">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Codart'17 | ACM VIT" />
+    <meta property="og:url" content="www.codart.acmvit.com" />
+    <meta property="og:title" content="Codart'17 | ACM VIT" />
+    <meta property="og:description" content="Codart is a coding contest with a twist. First Round will be conducted online on hackerrank from 10-12th Feb. Second round will be conducted offline where participants need to throw darts in order to receive questions!" />
+    <meta property="og:image" content="http://codart17.esy.es/images/logo.png" />
+    <meta itemprop="name" content="Codart'17 | ACM VIT" />
+    <meta itemprop="description" content="Codart is a coding contest with a twist. First Round will be conducted online on hackerrank from 10-12th Feb. Second round will be conducted offline where participants need to throw darts in order to receive questions!" />
+    <meta itemprop="image" content="http://codart17.esy.es/images/logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@acmvit" />
+    <meta name="twitter:title" content="Codart'17 | ACM VIT" />
+    <meta name="twitter:description" content="Codart is a coding contest with a twist. First Round will be conducted online on hackerrank from 10-12th Feb. Second round will be conducted offline where participants need to throw darts in order to receive questions!" />
+    <meta name="twitter:image" content="http://codart17.esy.es/images/logo.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/http://codart17.esy.es/images/logo.png" />
+    <link rel="icon" type="image/png" href="http://codart17.esy.es/images/logo.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="http://codart17.esy.es/images/logo.png" sizes="128x128" />
+    <link rel="icon" href="http://codart17.esy.es/images/logo.png" />
+
+    <link rel="stylesheet" type="text/css" href="/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
+    <link href="/styles/materialicons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika+Negative" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles/mystyle.css">
+    <style type="text/css">
+        @media(max-width:769px){
+            #hackerrank{
+                padding-bottom: 1rem;
+            }
+        }
+        .error-ul li{
+            list-style: initial;
+            color: red !important;
+            margin-left: 1rem;
+        }
+        .msg-success{
+            color:green !important;
+            text-align: center;
+        }
+    </style>
+    <!--  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+     <script type="text/javascript">
+      (function(){
+       emailjs.init("user_N4tbQO3DhT5HZfYujve5X");
+   })();
+  </script> -->
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" type="text/javascript"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <link rel="stylesheet" type="text/css" href="/styles/register.css">
+
+
+
+
+
+
+</head>
+
+
+<body>
+<div class="container">
+    <br>
+    <div class="div-codart center wow fadeIn">
+        <a href="/"> <img src="/images/codart.png" class="img-codart center responsive-img"></a>
+    </div>
+    <h3 class="center">Register your team</h3>
+
+
+    <!-- ERROR -->
+
+    <% if(flash && flash.err1) { %>
+    <ul class="alert alert-success">
+        <h6 class="error-fix">Please fix the following errors:</h6>
+
+        <% if(flash.err1) { %>
+        <% Object.keys(flash.err1).forEach(function(error) { %>
+        <ul class="error-ul">
+            <li>Please enter all the fields properly.</li>
+
+        </ul>
+
+        <% }) %>
+
+        <% } %>
+
+            </ul>
+        <% } %>
+    <!-- ERROR CLOSED -->
+
+        <% if(flash && flash.err2) { %>
+        <ul class="alert alert-success">
+            <% if(flash.err2) { %>
+            <% Object.keys(flash.err2).forEach(function(error) { %>
+            <h4 class="msg-success">Thank you for registering!</h4>
+                <% }) %>
+                <% } %>
+
+            </ul>
+            <% } %>
+
+    <form action="/user/create/" method="POST"  id="form-register" novalidate>
+        <div class="row">
+            <br><br><br>
+            <div class="single-wrap col m12">
+                <div class="input-field col s12 m6">
+                    <input id="name" type="text" class="validate" required name="name">
+                    <label for="name">Name <span class="required">*</span></label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="regno" type="text" class="validate" required name="regno">
+                    <label for="regno">Reg no <span class="required">*</span></label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="phone" type="number" class="validate" required maxlength="10" name="phone">
+                    <label for="phone">Phone no <span class="required">*</span></label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="email" type="email" class="validate" required name="email">
+                    <label for="email">Email <span class="required">*</span></label>
+                </div>
+            </div>
+            <div class="input-field col s12 m6 left-align">
+                <input class="with-gap member-choose" name="team" type="radio" id="oneteam" value="1" checked="checked"  />
+                <label for="oneteam">One member</label>
+                &nbsp;&nbsp;
+                <input class="with-gap member-choose" name="team" type="radio" id="twoteam" value="2" />
+                <label for="twoteam">Two members</label>
+
+            </div>
+            <div class="s_name_div">
+                <div class="input-field col s12 m6">
+                    <input id="s_name" type="text" class="validate" name="s_name">
+                    <label for="s_name">Team member's name <span class="required">*</span></label>
+                </div>
+            </div>
+
+
+            <div class="input-field col s12 m12">
+                <input id="hackerrank" type="text" class="validate" required name="hackerrank">
+                <label for="hackerrank">HackerRank userid (One HackerRank account for one team) <span class="required">*</span></label>
+            </div>
+            <div class="col s12 center">
+            </div>
+
+
+
+
+            <div class="center-align col s12">
+                <br>
+                <button class="waves-effect btn btn-submit" type="submit" id="submit">Submit <i class="material-icons right">send</i></button>
+            </div>
+            <br><br>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    //register form
+    $(document).ready(function() {
+        var choose=$(".member-choose");
+        var wrap2=$(".double-wrap");
+        var wrap1=$(".single-wrap");
+        $(choose).change(function() {
+            console.log("chan");
+            if (this.value == '1') {
+                disp_one();
+                console.log("one");
+            }
+            else if (this.value == '2') {
+                disp_two();
+                console.log("two");
+            }
+        });
+        function disp_one(){
+            $(".s_name_div").slideUp();
+        }
+        function disp_two(){
+            $(".s_name_div").slideDown();
+        }
+        disp_one();
+    });
+</script>
+
+</body>
+</html>
